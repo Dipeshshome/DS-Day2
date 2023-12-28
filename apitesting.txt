@@ -1,0 +1,6 @@
+curl -X POST -H "Content-Type: application/json" -d '{"question": "What is my top earning sale item?"}' http://localhost:5000/answer_question
+curl -X POST -H "Content-Type: application/json" -d '{"question": "best sales city"}' http://localhost:5000/answer_question
+
+curl -X POST -H "Content-Type: application/json" -d '{"order_id": 10299}' http://localhost:5000/order_items
+
+curl -X POST -H "Content-Type: application/json" -d '{"month": 1}' http://localhost:5000/recommendation
