@@ -29,6 +29,7 @@ def answer_question():
 def get_order_items():
     try:
         order_id = request.json['order_id']
+        #items = df[df['ORDERNUMBER'] == order_id]['PRODUCTLINE'].tolist()
         items = df[df['ORDERNUMBER'] == order_id]['PRODUCTLINE'].unique()
         return jsonify({'items': items.tolist()})
     except Exception as e:
