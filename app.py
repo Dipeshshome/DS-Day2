@@ -12,8 +12,8 @@ def answer_question():
 
         # Rule-based approach to answer questions
         if 'top earning sale item' in question:
-            product_line_distribution = df['PRODUCTLINE'].value_counts()
-            answer = product_line_distribution.idxmax()
+            answer = df.groupby('PRODUCTLINE')['SALES'].sum().idxmax()
+
         elif 'best sales city' in question:
             answer = df.groupby('CITY')['SALES'].sum().idxmax()
         else:
